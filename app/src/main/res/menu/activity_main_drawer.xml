@@ -10,11 +10,6 @@
             android:title="@string/sidebar_button_logout" />
 
         <item
-            android:id="@+id/nav_reload"
-            android:icon="@android:drawable/stat_notify_sync"
-            android:title="@string/sidebar_button_reload" />
-
-        <item
             android:id="@+id/appbar_hide"
             android:icon="@android:drawable/ic_menu_more"
             android:title="@string/sidebar_button_toggle_appbar_visibility" />
