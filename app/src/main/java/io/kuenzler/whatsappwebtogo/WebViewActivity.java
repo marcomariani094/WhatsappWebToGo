@@ -220,6 +220,10 @@ public class WebViewActivity extends AppCompatActivity implements NavigationView
             @Override
             public void onPageCommitVisible(WebView view, String url) {
                 super.onPageCommitVisible(view, url);
+
+                if (mDarkMode) {
+                    addDarkMode(view);
+                }
             }
 
             @Override
