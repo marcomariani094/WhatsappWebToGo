@@ -14,4 +14,5 @@
     <string name="appbar_button_scroll_left">nach links scrollen</string>
     <string name="appbar_title_scroll_right">nach rechts scrollen</string>
     <string name="appbar_button_toggle_keyboard">Tastatur umschalten</string>
+    <string name="app_name">WhatsApp Web To Go</string>
 </resources>

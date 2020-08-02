@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">WhatsApp Web</string>
+    <string name="navigation_drawer_open">Apri Menu Laterale</string>
+    <string name="navigation_drawer_close">Chiudi Menu Laterale</string>
+    <string name="sidebar_button_logout">Logout</string>
+    <string name="sidebar_button_reload">Ricarica</string>
+    <string name="sidebar_button_new_session">Nuova Sessione</string>
+    <string name="sidebar_button_switch_session">Cambia Sessione</string>
+    <string name="sidebar_button_toggle_dark_mode">" Tema Scuro"</string>
+    <string name="sidebar_title_settings">Impostazioni</string>
+    <string name="appbar_button_scroll_left">Scrolla a Sinistra</string>
+    <string name="appbar_title_scroll_right">Scrolla a Destra</string>
+    <string name="appbar_button_toggle_keyboard">Tastiera</string>
+    <string name="sidebar_button_toggle_appbar_visibility">Mostra Appbar</string>
+    <string name="sidebar_button_about">Informazioni</string>
+</resources>

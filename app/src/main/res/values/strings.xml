@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name" translatable="false">WhatsApp Web To Go</string>
+    <string name="app_name">WhatsApp Web To Go</string>
     <string name="appversion_semantic" translatable="false">1.6.1</string>
 
     <string name="versionInfoText">Thanks for updating!\nNew in version 1.6.1:\n&#8211;Fix strings and de translation\n&#8211;Fix url validation (thanks to @luchua-bc)\n&#8211;Fix typo for dark mode toggle (thanks to @gbraad)</string>
