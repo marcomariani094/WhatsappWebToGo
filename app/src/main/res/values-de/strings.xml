@@ -7,7 +7,6 @@
     <string name="sidebar_button_new_session">Neue Session</string>
     <string name="sidebar_button_switch_session">Session wechseln</string>
     <string name="sidebar_button_toggle_appbar_visibility">Appbar umschalten</string>
-    <string name="sidebar_button_toggle_dark_mode">Dark Mode umschalten</string>
     <string name="sidebar_button_about">Über</string>
     <string name="sidebar_title_settings">Einstellungen</string>
     <string name="sidebar_button_settings">@string/sidebar_title_settings</string>

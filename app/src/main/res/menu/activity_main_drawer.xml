@@ -15,11 +15,6 @@
             android:title="@string/sidebar_button_toggle_appbar_visibility" />
 
         <item
-            android:id="@+id/nav_dark_mode"
-            android:icon="@drawable/baseline_brightness_2_white_24"
-            android:title="@string/sidebar_button_toggle_dark_mode" />
-
-        <item
             android:id="@+id/nav_about"
             android:icon="@android:drawable/ic_dialog_info"
             android:title="@string/sidebar_button_about" />

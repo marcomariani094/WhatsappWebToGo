@@ -7,7 +7,6 @@
     <string name="sidebar_button_reload">Ricarica</string>
     <string name="sidebar_button_new_session">Nuova Sessione</string>
     <string name="sidebar_button_switch_session">Cambia Sessione</string>
-    <string name="sidebar_button_toggle_dark_mode">" Tema Scuro"</string>
     <string name="sidebar_title_settings">Impostazioni</string>
     <string name="appbar_button_scroll_left">Scrolla a Sinistra</string>
     <string name="appbar_title_scroll_right">Scrolla a Destra</string>

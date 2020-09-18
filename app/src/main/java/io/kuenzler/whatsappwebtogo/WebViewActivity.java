@@ -154,12 +154,6 @@ public class WebViewActivity extends AppCompatActivity implements NavigationView
         mWebView.setScrollbarFadingEnabled(true);
 
         mWebView.setWebChromeClient(new WebChromeClient() {
-
-            @Override
-            public void onProgressChanged(WebView view, int progress) {
-                addDarkMode(view);
-            }
-
             @Override
             public boolean onCreateWindow(WebView view, boolean dialog, boolean userGesture, Message resultMsg) {
                 Toast.makeText(getApplicationContext(), "OnCreateWindow", Toast.LENGTH_LONG).show();
@@ -220,10 +214,6 @@ public class WebViewActivity extends AppCompatActivity implements NavigationView
             @Override
             public void onPageCommitVisible(WebView view, String url) {
                 super.onPageCommitVisible(view, url);
-
-                if (mDarkMode) {
-                    addDarkMode(view);
-                }
             }
 
             @Override
@@ -535,7 +525,7 @@ public class WebViewActivity extends AppCompatActivity implements NavigationView
     }
 
     private void restartApp() {
-        startActivity(new Intent(getApplicationContext(), MainActivity.class));
+        startActivity(new Intent(getApplicationContext(), WebViewActivity.class));
         this.finish();
     }
 
@@ -562,8 +552,6 @@ public class WebViewActivity extends AppCompatActivity implements NavigationView
         } else if (id == R.id.nav_reload) {
             showSnackbar("reloading...");
             loadWhatsApp();
-        } else if (id == R.id.nav_dark_mode) {
-            toggleDarkMode();
         }
 
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
