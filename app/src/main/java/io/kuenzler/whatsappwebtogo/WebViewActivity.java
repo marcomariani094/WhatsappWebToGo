@@ -298,6 +298,10 @@ public class WebViewActivity extends AppCompatActivity implements NavigationView
                 showToast("scroll right");
                 runOnUiThread(() -> mWebView.scrollTo(2000, 0));
                 break;
+            case R.id.nav_reload:
+                showSnackbar("reloading...");
+                loadWhatsApp();
+                break;
         }
         return true;
     }
@@ -549,9 +553,6 @@ public class WebViewActivity extends AppCompatActivity implements NavigationView
             loadWhatsApp();
         } else if (id == R.id.nav_about) {
             showAbout();
-        } else if (id == R.id.nav_reload) {
-            showSnackbar("reloading...");
-            loadWhatsApp();
         }
 
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
