@@ -65,8 +65,11 @@ public class WebViewActivity extends AppCompatActivity implements NavigationView
     private static final String AUDIO_PERMISSION = Manifest.permission.RECORD_AUDIO; // "android.permission.RECORD_AUDIO";
     private static final String[] VIDEO_PERMISSION = {CAMERA_PERMISSION, AUDIO_PERMISSION};
 
+    private static final String WHATSAPP_HOMEPAGE_URL = "https://www.whatsapp.com/";
+
+    private static final String WHATSAPP_WEB_BASE_URL = "web.whatsapp.com";
     private static final String WORLD_ICON = "\uD83C\uDF10";
-    private static final String WHATSAPP_WEB_URL = "https://web.whatsapp.com"
+    private static final String WHATSAPP_WEB_URL = "https://" + WHATSAPP_WEB_BASE_URL
             + "/" + WORLD_ICON + "/"
             + Locale.getDefault().getLanguage();
 
@@ -227,7 +230,16 @@ public class WebViewActivity extends AppCompatActivity implements NavigationView
                 Uri url = request.getUrl();
                 Log.d(DEBUG_TAG, url.toString());
 
-                if (url.getHost().equals("web.whatsapp.com")) {
+                if (url.toString().equals(WHATSAPP_HOMEPAGE_URL)){
+                    // when whatsapp somehow detects that waweb is running on a phone (e.g. trough
+                    // the user agent, but apparently somehow else), it automatically redicts to the
+                    // WHATSAPP_HOMEPAGE_URL. It's higly unlikely that a user wants to visit the
+                    // WHATSAPP_HOMEPAGE_URL from within waweb.
+                    // -> block the request and reload waweb
+                    showToast("WA Web has to be reloaded to keep the app running");
+                    loadWhatsapp();
+                    return true;
+                } else if (url.getHost().equals(WHATSAPP_WEB_BASE_URL)) {
                     // whatsapp web request -> fine
                     return super.shouldOverrideUrlLoading(view, request);
                 } else {
@@ -450,7 +462,7 @@ public class WebViewActivity extends AppCompatActivity implements NavigationView
         mSharedPrefs.edit().putBoolean("darkMode", !currentState).apply();
 
         Log.d(DEBUG_TAG, "Dark Mode Enabled: " + !currentState);
-        restartApp();
+        recreate();
     }
 
     private void showVersionInfo() {
@@ -539,7 +551,6 @@ public class WebViewActivity extends AppCompatActivity implements NavigationView
         int id = item.getItemId();
 
         if (id == R.id.appbar_hide) {
-            MenuItem view = findViewById(R.id.appbar_hide);
             if (getSupportActionBar().isShowing()) {
                 showSnackbar("hiding... swipe right to show navigation bar");
                 setAppbarEnabled(false);

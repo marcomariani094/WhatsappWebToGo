@@ -3,20 +3,20 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:showIn="navigation_view">
 
-    <group android:checkableBehavior="single">
+    <group android:checkableBehavior="none">
         <item
             android:id="@+id/nav_logout"
-            android:icon="@android:drawable/ic_menu_close_clear_cancel"
+            android:icon="@drawable/ic_logout"
             android:title="@string/sidebar_button_logout" />
 
         <item
             android:id="@+id/appbar_hide"
-            android:icon="@android:drawable/ic_menu_more"
+            android:icon="@drawable/ic_app_bar"
             android:title="@string/sidebar_button_toggle_appbar_visibility" />
 
         <item
             android:id="@+id/nav_about"
-            android:icon="@android:drawable/ic_dialog_info"
+            android:icon="@drawable/ic_about"
             android:title="@string/sidebar_button_about" />
 
     </group>
