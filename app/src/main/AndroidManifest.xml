@@ -23,7 +23,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme.NoActionBar">
         <activity
-            android:name=".WebviewActivity"
+            android:name=".WebViewActivity"
             android:configChanges="orientation|screenSize|smallestScreenSize|screenLayout|uiMode"
             android:persistableMode="persistAcrossReboots"
             android:launchMode="singleInstance"

@@ -237,7 +237,7 @@ public class WebViewActivity extends AppCompatActivity implements NavigationView
                     // WHATSAPP_HOMEPAGE_URL from within waweb.
                     // -> block the request and reload waweb
                     showToast("WA Web has to be reloaded to keep the app running");
-                    loadWhatsapp();
+                    loadWhatsApp();
                     return true;
                 } else if (url.getHost().equals(WHATSAPP_WEB_BASE_URL)) {
                     // whatsapp web request -> fine
